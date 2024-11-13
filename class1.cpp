@@ -77,4 +77,11 @@ void personalinfo::userinfo() const {
 	cout << "total number of friends are : " << count << endl;
 
 }
+void timeline::readfile() {
 
+	ifstream in("timeline.txt");
+	while (getline(in, posts)) {
+		cout << posts << endl;
+	}
+
+}
