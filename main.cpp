@@ -51,7 +51,12 @@ int main() {
 			cout << endl;
 			in.displayfriendslist();
 		}
+		
+		if (choice == 4) {
+			timeline t;
+			t.readfile();
+		}
 	}
 
-	while (choice != 4);
+	while (choice != 5);
 }
