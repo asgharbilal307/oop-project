@@ -32,3 +32,10 @@ public:
 	void userinfo() const ;
 	void displayfriendslist();
 };
+
+class timeline {
+	string posts;
+
+public:
+	void readfile();
+};
