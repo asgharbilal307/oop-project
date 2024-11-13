@@ -83,5 +83,4 @@ void timeline::readfile() {
 	while (getline(in, posts)) {
 		cout << posts << endl;
 	}
-in.close();
 }
