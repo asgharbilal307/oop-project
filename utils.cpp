@@ -1,89 +1,85 @@
+#include "utils.h"
 #include <iostream>
 #include <fstream>
-#include <string>
-#include "utils.h"
-using namespace std;
 
 Comment::Comment(): commentId(""), author(""), text("") {}
 
 Comment::Comment(string id): commentId(id) {
-	ifstream file("comments.txt");
-	string line;
-	
-	while (getline(file, line)) {
-		if (line.empty()) continue;
+    ifstream file("comments.txt");
+    string line;
 
-		if (line == id) {
-			getline(file, author);
-			getline(file, text);
-			break;
-		}
-	}
+    while (getline(file, line)) {
+        if (line.empty()) continue;
+
+        if (line == id) {
+            getline(file, author);
+            getline(file, text);
+            break;
+        }
+    }
 
     file.close();
 }
 
 void Comment::viewComment() {
-    cout << commentId << endl;
-    cout << author << endl;
-    cout << text << endl;
+    cout << "Comment id: " << commentId << endl;
+    cout << "Author: " << author << endl;
+    cout << "Text: " << text << endl;
 }
 
 Post::Post(): postId(""), description(""), comments(nullptr), commentsCount(0) {}
 
 Post::Post(string id): postId(id) {
-	ifstream file("posts.txt");
-	string line;
-	
-	while (getline(file, line)) {
-		if (line.empty()) continue;
+    ifstream file("posts.txt");
+    string line;
 
-		if (line == id) {
-			getline(file, description);
+    while (getline(file, line)) {
+        if (line.empty()) continue;
 
-			string commentsLine;
-			getline(file, commentsLine);
-			
-			string temp = commentsLine;
-			commentsCount = 0;
+        if (line == id) {
+            getline(file, description);
+            string commentsLine;
+            getline(file, commentsLine);
+            string temp = commentsLine;
+            commentsCount = 0;
 
-			while (true) {
-				int foundIndex = temp.find(",");
+            while (true) {
+                int foundIndex = temp.find(",");
 
-				if (foundIndex != string::npos) {
-					commentsCount++;
+                if (foundIndex != string::npos) {
+                    commentsCount++;
                     temp.erase(0, foundIndex + 2);
-				} else {
-					commentsCount++;
-					break;
-				}
-			}
+                } else {
+                    commentsCount++;
+                    break;
+                }
+            }
 
-			comments = new Comment[commentsCount];
-			temp = commentsLine;
+            comments = new Comment[commentsCount];
+            temp = commentsLine;
 
-			for (int i = 0; i < commentsCount; i++) {
-				int foundIndex = temp.find(",");
+            for (int i = 0; i < commentsCount; i++) {
+                int foundIndex = temp.find(",");
 
-				if (foundIndex != string::npos) {
-					comments[i] = Comment(temp.substr(0, foundIndex));
-					temp.erase(0, foundIndex + 2);
-				} else {
+                if (foundIndex != string::npos) {
                     comments[i] = Comment(temp.substr(0, foundIndex));
-					break;
-				}
-			}
+                    temp.erase(0, foundIndex + 2);
+                } else {
+                    comments[i] = Comment(temp.substr(0, foundIndex));
+                    break;
+                }
+            }
 
-			break;
-		}
-	}
+            break;
+        }
+    }
 
     file.close();
 }
 
 void Post::viewPost() {
-    cout << postId << endl;
-    cout << description << endl;
+    cout << "Post id: " << postId << endl;
+    cout << "Description: " << description << endl;
 }
 
 void Post::viewComments() {
@@ -96,47 +92,45 @@ Page::Page(): pageId(""), title(""), likes(""), posts(nullptr), postsCount(0) {}
 
 Page::Page(string id): pageId(id) {
     ifstream file("pages.txt");
-	string line;
+    string line;
 
     while (getline(file, line)) {
-		if (line.empty()) continue;
+        if (line.empty()) continue;
 
-		if (line == id) {
-			getline(file, title);
+        if (line == id) {
+            getline(file, title);
             getline(file, likes);
-
-			string postLine;
-			getline(file, postLine);
-
+            string postLine;
+            getline(file, postLine);
             string temp = postLine;
-			postsCount = 0;
+            postsCount = 0;
 
             while (true) {
-				int foundIndex = temp.find(",");
+                int foundIndex = temp.find(",");
 
-				if (foundIndex != string::npos) {
-					postsCount++;
-					temp.erase(0, foundIndex + 2);
-				} else {
-					postsCount++;
-					break;
-				}
-			}
+                if (foundIndex != string::npos) {
+                    postsCount++;
+                    temp.erase(0, foundIndex + 2);
+                } else {
+                    postsCount++;
+                    break;
+                }
+            }
 
-			posts = new Post[postsCount];
-			temp = postLine;
+            posts = new Post[postsCount];
+            temp = postLine;
 
-			for (int i = 0; i < postsCount; i++) {
-				int foundIndex = temp.find(",");
+            for (int i = 0; i < postsCount; i++) {
+                int foundIndex = temp.find(",");
 
-				if (foundIndex != string::npos) {
-					posts[i] = Post(temp.substr(0, foundIndex));
-					temp.erase(0, foundIndex + 2);
-				} else {
+                if (foundIndex != string::npos) {
                     posts[i] = Post(temp.substr(0, foundIndex));
-					break;
-				}
-			}
+                    temp.erase(0, foundIndex + 2);
+                } else {
+                    posts[i] = Post(temp.substr(0, foundIndex));
+                    break;
+                }
+            }
 
             break;
         }
@@ -146,9 +140,9 @@ Page::Page(string id): pageId(id) {
 }
 
 void Page::viewPage() {
-    cout << pageId << endl;
-    cout << title << endl;
-    cout << likes << endl;
+    cout << "Page id: " << pageId << endl;
+    cout << "Title: " << title << endl;
+    cout << "Likes: " << likes << endl;
 }
 
 void Page::viewPosts() {
@@ -157,6 +151,70 @@ void Page::viewPosts() {
     }
 }
 
-User::User(): email(""), name(""), bio(""), friends(nullptr), friendsCount(0), likedPages(nullptr), likedPagesCount(0) {}
+User::User(): email(""), name(""), bio(""), friends(""), likedPages(nullptr), likedPagesCount(0) {}
 
-User::User(string e): email(e) {}
+User::User(string e): email(e) {
+    ifstream file("users.txt");
+    string line;
+
+    while (getline(file, line)) {
+        if (line.empty()) continue;
+
+        if (line == email) {
+            getline(file, name);
+            getline(file, bio);
+            getline(file, friends);
+            string likedPagesLine;
+            getline(file, likedPagesLine);
+            string temp = likedPagesLine;
+            likedPagesCount = 0;
+
+            while (true) {
+                int foundIndex = temp.find(",");
+
+                if (foundIndex != string::npos) {
+                    likedPagesCount++;
+                    temp.erase(0, foundIndex + 2);
+                } else {
+                    likedPagesCount++;
+                    break;
+                }
+            }
+
+            likedPages = new Page[likedPagesCount];
+            temp = likedPagesLine;
+
+            for (int i = 0; i < likedPagesCount; i++) {
+                int foundIndex = temp.find(",");
+
+                if (foundIndex != string::npos) {
+                    likedPages[i] = Page(temp.substr(0, foundIndex));
+                    temp.erase(0, foundIndex + 2);
+                } else {
+                    likedPages[i] = Page(temp.substr(0, foundIndex));
+                    break;
+                }
+            }
+
+            break;
+        }
+    }
+
+    file.close();
+}
+
+void User::viewUser() {
+    cout << "Email: " << email << endl;
+    cout << "Name: " << name << endl;
+    cout << "Bio: " << bio << endl;
+}
+
+void User::viewFriends() {
+    cout << "Friends: " << friends << endl;
+}
+
+void User::viewLikedPages() {
+    for (int i = 0; i < likedPagesCount; i++) {
+       likedPages[i].viewPage();
+    }
+}
