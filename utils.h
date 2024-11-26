@@ -1,4 +1,6 @@
-#pragma once
+#ifndef UTILS_H
+#define UTILS_H
+
 #include <string>
 using namespace std;
 
@@ -48,8 +50,7 @@ private:
     string email;
     string name;
     string bio;
-    User* friends;
-    int friendsCount;
+    string friends;
     Page* likedPages;
     int likedPagesCount;
 
@@ -61,3 +62,4 @@ public:
     void viewLikedPages();
 };
 
+#endif
