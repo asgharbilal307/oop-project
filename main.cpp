@@ -12,7 +12,6 @@ int main() {
 	cout << "Enter password: ";
 	string password;
 	cin >> password;
-
 	bool emailCorrect = false;
 	ifstream file("login.txt");
     string line;
@@ -37,59 +36,63 @@ int main() {
 		User* user = new User(email);
 		cout << "Welcome" << endl;
 		
-		int value;
+		int firstValue;
+		int secondValue;
+		int thirdValue;
 
 		while (true) {
 			cout << "Enter 1 to view info, 2 to view friends, 3 to view liked pages, 4 to exit: ";
-			cin >> value;
+			cin >> firstValue;
 
-			if (value == 1) {
+			if (firstValue == 1) {
 				user->viewUser();
-			} else if (value == 2) {
+			} else if (firstValue == 2) {
 				user->viewFriends();
-			} else if (value == 3) {
+			} else if (firstValue == 3) {
 				user->viewLikedPages();
-			} else if (value == 4) {
+			} else if (firstValue == 4) {
 				break;
 			} else {
 				cout << "Invalid number entered. Please try again." << endl;
 			}
 		}
 
+		string pageId;
 		cout << "Enter page id: ";
-		cin >> value;
+		cin >> pageId;
 
-		Page* page = new Page(to_string(value));
+		Page* page = new Page(pageId);
 
 		while (true) {
 			cout << "Enter 1 to view page, 2 to view posts, 3 to exit: ";
-			cin >> value;
+			cin >> secondValue;
 
-			if (value == 1) {
+			if (secondValue == 1) {
 				page->viewPage();
-			} else if (value == 2) {
+			} else if (secondValue == 2) {
 				page->viewPosts();
-			} else if (value == 3) {
+			} else if (secondValue == 3) {
 				break;
 			} else {
 				cout << "Invalid number entered. Please try again." << endl;
 			}
 		}
 
+		string postId;
 		cout << "Enter post id: ";
-		cin >> value;
+		cin >> postId;
 
-		Post* post = new Post(to_string(value));
+		Post* post = new Post(postId);
 
 		while (true) {
 			cout << "Enter 1 to view post, 2 to view comments, 3 to exit: ";
-			cin >> value;
+			cin >> thirdValue;
 
-			if (value == 1) {
+			if (thirdValue == 1) {
 				post->viewPost();
-			} else if (value == 2) {
+			} else if (thirdValue == 2) {
 				post->viewComments();
-			} else if (value == 3) {
+			} else if (thirdValue == 3) {
 				break;
 			} else {
 				cout << "Invalid number entered. Please try again." << endl;

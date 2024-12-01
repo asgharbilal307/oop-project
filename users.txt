@@ -2,28 +2,28 @@ jamesthompson@gmail.com
 James Thompson
 A tech enthusiast passionate about web development and digital marketing. Always learning something new!
 oliviajohnson@yahoo.com.com, sophiawilson@gmail.com
-7, 3
+x7, x3
 
 oliviajohnson@yahoo.com
 Olivia Johnson
 Graphic designer and photographer. Creating visually stunning designs with a focus on simplicity and elegance.
 matthewdavis@outlook.com, sophiawilson@gmail.com
-10, 1
+x10, x1
 
 matthewdavis@outlook.com
 Matthew Davis
 Full-stack developer with a love for open-source projects. Exploring the intersection of technology and creativity.
 sophiawilson@gmail.com, oliviajohnson@yahoo.com, jamesthompson@gmail.com
-4
+x4
 
 sophiawilson@gmail.com
 Sophia Wilson
 Content writer and SEO specialist. Helping businesses grow with powerful, data-driven content strategies.
 matthewdavis@outlook.com, ethanmartinez@hotmail.com, jamesthompson@gmail.com
-9, 2, 8, 5
+x9, x2, x8, x5
 
 ethanmartinez@hotmail.com
 Ethan Martinez
 Data scientist and machine learning practitioner. Focused on solving real-world problems with data.
 sophiawilson@gmail.com
-6
+x6
