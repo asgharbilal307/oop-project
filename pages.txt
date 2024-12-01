@@ -1,49 +1,49 @@
-1
+x1
 Daily Motivation Quotes
 12567
-6, 19, 17
+y6, y19, y17
 
-2
+x2
 Wanderlust Travelers
 45782
-24, 12, 38, 8, 7
+y24, y12, y38, y8, y7
 
-3
+x3
 Foodies United
 32540
-2, 15
+y2, y15
 
-4
+x4
 Tech Trends 24/7
 18950
-3, 22, 11
+y3, y22, y11
 
-5
+x5
 Fitness Freaks Hub
 28567
-25, 14, 5, 27, 37, 23, 13
+y25, y14, y5, y27, y37, y23, y13
 
-6
+x6
 Classic Rock Lovers
 45760
-33
+y33
 
-7
+x7
 Home Decor Ideas
 34129
-26, 39, 28, 34, 31, 29, 10, 35
+y26, y39, y28, y34, y31, y29, y10, y35
 
-8
+x8
 Bookworms Paradise
 17284
-9, 18, 16, 4
+y9, y18, y16, y4
 
-9
+x9
 Pet Lovers Worldwide
 65823
-30, 32, 21
+y30, y32, y21
 
-10
+x10
 Digital Marketing Tips
 29457
-1
+y1
