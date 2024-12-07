@@ -1,29 +1,22 @@
-jamesthompson@gmail.com
-James Thompson
-A tech enthusiast passionate about web development and digital marketing. Always learning something new!
-oliviajohnson@yahoo.com.com, sophiawilson@gmail.com
-x7, x3
+Bilal Asghar
+I am Batman
+Mohammad Rohan,Zain,Umair Maqsood,Usman Lari,Faiq Saeed
+Umair Maqsod
+Student
+Bilal Asghar,Bilal Razaq,Faiq Saeed,Abdllah Ijaz
+M Rohan
+I'm Black
+Bilal Asghar,Shehryar Amir,Faiq Saeed,Umair Maqsood
 
-oliviajohnson@yahoo.com
-Olivia Johnson
-Graphic designer and photographer. Creating visually stunning designs with a focus on simplicity and elegance.
-matthewdavis@outlook.com, sophiawilson@gmail.com
-x10, x1
+Notifications
+Bilal Asghar
+Usman Lari Shared a memory
+Faiq Saeed Tagged you in a post
+M Rohan Liked your post
 
-matthewdavis@outlook.com
-Matthew Davis
-Full-stack developer with a love for open-source projects. Exploring the intersection of technology and creativity.
-sophiawilson@gmail.com, oliviajohnson@yahoo.com, jamesthompson@gmail.com
-x4
+Umair Maqsood
+You have a new friend suggestion
 
-sophiawilson@gmail.com
-Sophia Wilson
-Content writer and SEO specialist. Helping businesses grow with powerful, data-driven content strategies.
-matthewdavis@outlook.com, ethanmartinez@hotmail.com, jamesthompson@gmail.com
-x9, x2, x8, x5
-
-ethanmartinez@hotmail.com
-Ethan Martinez
-Data scientist and machine learning practitioner. Focused on solving real-world problems with data.
-sophiawilson@gmail.com
-x6
+M Rohan
+Bilal Asghar commented on your photo
+Usman Lari sent you a message
